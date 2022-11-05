@@ -1,6 +1,7 @@
 import {
   createUser,
-  deleteUsersByUsername, findAllUsers,
+  deleteUsersByUsername,
+  findAllUsers,
   findUserById
 } from "../services/users-service";
 
@@ -36,7 +37,6 @@ describe('createUser', () => {
 });
 
 describe('deleteUsersByUsername', () => {
-
   // sample user to delete
   const sowell = {
     username: 'thommas_sowell',
@@ -104,9 +104,7 @@ describe('findUserById',  () => {
   });
 });
 
-
 describe('findAllUsers',  () => {
-
   // sample users we'll insert to then retrieve
   const usernames = [
     "larry", "curley", "moe"

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/react": "^12.1.2",
+    "@testing-library/react": "^12.1.5",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.26.0",
     "react": "^17.0.2",
@@ -37,8 +37,10 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.19.6",
     "@testing-library/jest-dom": "^5.16.2",
     "@types/jest": "^27.4.0",
+    "jest": "^27.5.1",
     "ts-jest": "^27.1.3"
   }
 }
