@@ -20,6 +20,7 @@ const Tuit = ({tuit, deleteTuit}) => {
           {tuit.postedBy && tuit.postedBy.username}
           @{tuit.postedBy && tuit.postedBy.username} -
           {tuit.published}</h2>
+          {/* Public date is named as postedOn in the node project. */}
         {tuit.tuit}
         {
           tuit.youtube &&
@@ -34,4 +35,5 @@ const Tuit = ({tuit, deleteTuit}) => {
     </li>
   );
 }
+
 export default Tuit;

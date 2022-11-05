@@ -1,10 +1,17 @@
-import {UserList} from "../components/profile/userList";
+/**
+ * @jest-environment jsdom
+ */
+import {UserList} from "../components/profile/user-list";
+import '@testing-library/jest-dom';
 import {screen, render} from "@testing-library/react";
 import {HashRouter} from "react-router-dom";
 import {findAllUsers} from "../services/users-service";
 import axios from "axios";
+import * as React from 'react';
 
 jest.mock('axios');
+axios.get.mockImplementation(() =>
+                                 Promise.resolve({ data: {users: MOCKED_USERS} }));
 
 const MOCKED_USERS = [
   {username: 'ellen_ripley', password: 'lv426', email: 'repley@weyland.com', _id: "123"},
@@ -20,19 +27,18 @@ test('user list renders static user array', () => {
   expect(linkElement).toBeInTheDocument();
 });
 
-test('user list renders async', async () => {
+// This test requires UNmocked axios module and can be fragile.
+test('user list renders from RESTful API', async () => {
   const users = await findAllUsers();
   render(
     <HashRouter>
       <UserList users={users}/>
     </HashRouter>);
-  const linkElement = screen.getByText(/NASA/i);
+  const linkElement = screen.getByText(/Elon/i);
   expect(linkElement).toBeInTheDocument();
 })
 
 test('user list renders mocked', async () => {
-  axios.get.mockImplementation(() =>
-    Promise.resolve({ data: {users: MOCKED_USERS} }));
   const response = await findAllUsers();
   const users = response.users;
 
