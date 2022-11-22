@@ -16,6 +16,7 @@ function Navigation() {
         {label: 'Profile', icon: 'fa-user', path: '/profile'},
         {label: 'Movies', icon: 'fa-user', path: '/movies'},
         {label: 'More', icon: 'fa-circle-ellipsis', path: '/more'},
+        {label: 'Sign Up', icon: 'fa-user', path: '/signup'},
         {label: 'Login', icon: 'fa-user', path: '/login'},
     ];
     return (
