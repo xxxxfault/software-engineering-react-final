@@ -48,7 +48,7 @@ describe('test links', () => {
     // console.log(element);
     // lis.forEach(li => {
     //     fireEvent.click(li)
-    //
+    //    
     //     // click(li).then(result => console.log(result))
     //     console.log(li.className)
     // })
