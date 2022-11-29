@@ -11,3 +11,34 @@
     content: "";
     padding-top: 56.25%;
 }
+.tuit-img{
+    list-style: none;
+    display: inline-block;
+    width: 33.3%;
+    height: auto;
+    overflow: hidden;
+    vertical-align: bottom;
+    text-align: center;
+}
+.no-bullets {
+    list-style-type: none; /* Remove bullets */
+    padding-left: 0px; /* Remove padding */
+    margin: 0; /* Remove margins */
+}
+.clearfix:after{
+    position: relative;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.li-img{
+    position: relative;
+    width: 100%;
+    padding: 2px;
+}
+li:only-child{
+    width: auto;
+}

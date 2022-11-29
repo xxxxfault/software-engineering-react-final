@@ -4,6 +4,7 @@ import TuitImage from "./tuit-image";
 import TuitVideo from "./tuit-video";
 
 const Tuit = ({tuit, deleteTuit, likeTuit, dislikeTuit}) => {
+  
   return(
     <li className="p-2 ttr-tuit list-group-item d-flex rounded-0">
       <div className="pe-2">
@@ -26,10 +27,13 @@ const Tuit = ({tuit, deleteTuit, likeTuit, dislikeTuit}) => {
           tuit.youtube &&
             <TuitVideo tuit={tuit}/>
         }
-        {
-          tuit.image &&
-          <TuitImage tuit={tuit}/>
-        }
+        <div>
+            <ul class="clearfix no-bullets" >
+                    {tuit.image && tuit.image.map(image => {return (
+                        <li class="tuit-img"><TuitImage tuit={tuit} image={image}/></li>
+                    );})}
+            </ul>
+        </div>
         <TuitStats tuit={tuit} likeTuit={likeTuit} dislikeTuit={dislikeTuit}/>
       </div>
     </li>

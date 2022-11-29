@@ -1,9 +1,11 @@
 import React from "react";
-const TuitImage = ({tuit}) => {
+
+const TuitImage = ({tuit, image}) => {
+  
   return(
     <div className="position-relative">
-      <img src={tuit.image}
-           className="mt-2 w-100 ttr-rounded-15px"/>
+      <img src={image}
+           className="mt-2 w-100 li-img"/>
       {
         tuit.imageOverlay &&
         <span
