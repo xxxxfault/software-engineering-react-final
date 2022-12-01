@@ -8,17 +8,7 @@ const CreateTuit = () => {
     const {uid} = useParams();
     const [tuitText, setTuitText] = useState("");
     const [files, setFiles] = useState([]);
-    const [tuits, setTuits] = useState([]);
     const userId = uid;
-    const findTuits = () => {
-        if(uid) {
-            return service.findAllTuitsByUser(uid)
-                .then(tuits => setTuits(tuits))
-        } else {
-            return service.findAllTuits()
-                .then(tuits => setTuits(tuits))
-        }
-    }
     const uploadImageHandler = (event) => {
         const newFiles = [...event.target.files];
         // reset value so the same file won't be blocked
@@ -50,7 +40,11 @@ const CreateTuit = () => {
         }
         tuit.append('tuit', tuitText);
         service.createTuitByUser(userId, tuit)
-            .then(findTuits);
+            .then((tuit) => {
+                window.location.reload();
+                setTuitText("");
+                setFiles([]);
+            });
     }
     const textArea = (e) => {
         setTuitText(e.target.value);
