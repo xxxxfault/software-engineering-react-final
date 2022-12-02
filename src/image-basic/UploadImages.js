@@ -1,0 +1,53 @@
+import React, { useCallback, useEffect, useState } from "react";
+import { useNavigate, useParams } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import { uploadPhoto } from "./upload-service";
+
+const UploadImages = () => {
+
+    let params = useParams();
+    const navigate = useNavigate();
+    const [photo_id, setPhotoId] = useState("");
+
+    const handleImageUpload = (event) => {
+        event.preventDefault();
+        const user_name = event.target[0].value;
+        const photo_name = event.target[1].value;
+        const photo = event.target[2].files[0];
+        const formData = new FormData();
+        formData.append("user_id", params.id);
+        formData.append("user_name", user_name);
+        formData.append("photo_name", photo_name);
+        formData.append("photo", photo);
+        const response = uploadPhoto(formData)
+            .then(
+                (photo) => {
+                    navigate(photo);
+                }
+            ).catch((e) => { console.log(e) })
+    };
+
+    return (
+        <div className="m-3">
+            <Form onSubmit={handleImageUpload}>
+                <Form.Group className="mb-3">
+                    <Form.Label className="mb-3">Author Name</Form.Label>
+                    <Form.Control className="control" id="user_name" type="text" />
+                </Form.Group>
+                <Form.Group className="mb-3">
+                    <Form.Label className="mx-3">Photo Name</Form.Label>
+                    <Form.Control className="control" id="photo_name" type="text" />
+                </Form.Group>
+                <Form.Group className="mb-3">
+                    <Form.Label className="mx-3">Upload Photo Upload Photo (recommend Aspect ratio 3:2; photos should not exceed 5MB.)</Form.Label>
+                    <Form.Control className="control" id="fileInput" type="file" />
+                </Form.Group>
+                <Button variant="dark" type="submit">
+                    Submit
+                </Button>
+            </Form>
+        </div>
+    );
+}
+export default UploadImages;
