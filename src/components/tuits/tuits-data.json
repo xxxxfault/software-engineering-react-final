@@ -3,7 +3,7 @@
     "_id": "123",
     "postedBy": {"username": "NASA"},
     "tuit": "In 2021, our @NASAPersevere Mars rover landed and our Ingenuity helicopter took flight. Two asteroid missions launched to the skies, and another began its journey home to Earth. A look back at highlights for our #NASAScience planetary missions: https://go.nasa.gov/32zX2fE",
-    "image": "perseverance.jpg",
+    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nasa.gov%2Fpress-release%2Fnasa-leadership-positions-agency-for-future&psig=AOvVaw1SUbu4SP6o9Gi4wRpS2rMW&ust=1669752770674000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCIji-ffX0fsCFQAAAAAdAAAAABAJ",
     "youtube": null,
     "avatarLogo": "nasa-logo.jpg",
     "published": "Dec 25, 2021",
