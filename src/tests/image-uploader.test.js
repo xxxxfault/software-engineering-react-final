@@ -10,7 +10,7 @@ import {
 const fs = require("fs");
 // jest.mock('axios');
 
-const IMAGE1_PATH = `${__dirname}/test-media/image1.jpg`;
+const IMAGE1_PATH = './test-media/image1.jpg';
 
 describe('createTuitByUser', () => {
     // Sample user and tuit to create.
