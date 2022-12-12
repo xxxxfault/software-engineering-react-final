@@ -1,6 +1,7 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Frontend
+# React App is deployed on Netlify:
+https://main--rad-twilight-59eb8c.netlify.app/
 
 ## Available Scripts
 
@@ -17,54 +18,50 @@ You may also see any lint errors in the console.
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Backend
+# Node App is deployed on Heroku:
+https://fse-node-final.herokuapp.com/
 
-### `npm run eject`
+## Available Scripts
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+In the project directory, you can run:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `npm start`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Runs the app in the development mode.\
+Open [http://localhost:4000](http://localhost:4000) to view it in your browser.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### `npm run dev`
 
-## Learn More
+After the installation has run through completion, start the Node project.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### `tsc`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Compile Tyepscript code to Javascript code.
 
-### Code Splitting
+### `npm start`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Runs the app in the development mode.\
+Open [http://localhost:4000](http://localhost:4000) to view it in your browser.
 
-### Analyzing the Bundle Size
+Open [http://localhost:4000/hello](http://localhost:400/hello) to view it in your browser.
+To verify the server is running properly, point your browser to the URL below and 
+confirm it replies with Welcome to Foundation of Software Engineering
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## MongoDB Atlas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The database is deployed on MongoDB Atlas. To implement database function, you should add your MongoDB Atlas information in .env file.
+MongoDB Atlas username, MongoDB Atlas password
 
-### Advanced Configuration
+## AWS S3
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The image/media database is deployed on AWS S3. To implement database function, you should add your AWS S3 information in .env file.
+AWS account, AWS key, AWS region, AWS bucketname
