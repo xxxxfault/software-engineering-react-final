@@ -57,6 +57,11 @@ const Home = () => {
       }
     }
     // console.log(images);
+    if (tuit == '') {
+      // ignore
+      return;
+    }
+
     formData.append("tuit", tuit);
 
     service.createTuitByUser(userId, formData)
